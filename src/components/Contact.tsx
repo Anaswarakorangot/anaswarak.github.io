@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 // Web3Forms access key - get yours free at https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "da76d0b9-bec1-4b6b-b333-51333c2056a7";
 
 export const Contact = () => {
   const { toast } = useToast();
