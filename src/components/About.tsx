@@ -63,8 +63,8 @@ export const About = () => {
                   <div className="text-sm text-muted-foreground">Technologies</div>
                 </div>
                 <div className="glass-card p-4 text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-gradient">3rd</div>
-                  <div className="text-sm text-muted-foreground">Year Student</div>
+                  <div className="text-2xl md:text-3xl font-bold text-gradient">7.5</div>
+                  <div className="text-sm text-muted-foreground">CGPA</div>
                 </div>
               </div>
             </div>
