@@ -51,6 +51,7 @@ export const Contact = () => {
       formDataToSend.append("subject", formData.subject.trim());
       formDataToSend.append("message", formData.message.trim());
       formDataToSend.append("from_name", "Portfolio Contact Form");
+      formDataToSend.append("resume", `${window.location.origin}/resume.pdf`);
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
