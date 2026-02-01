@@ -44,20 +44,17 @@ export const Contact = () => {
     setSubmitStatus("idle");
 
     try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("access_key", WEB3FORMS_ACCESS_KEY);
+      formDataToSend.append("name", formData.name.trim());
+      formDataToSend.append("email", formData.email.trim());
+      formDataToSend.append("subject", formData.subject.trim());
+      formDataToSend.append("message", formData.message.trim());
+      formDataToSend.append("from_name", "Portfolio Contact Form");
+
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          name: formData.name.trim(),
-          email: formData.email.trim(),
-          subject: formData.subject.trim(),
-          message: formData.message.trim(),
-          from_name: "Portfolio Contact Form",
-        }),
+        body: formDataToSend,
       });
 
       const result = await response.json();
